@@ -1,0 +1,30 @@
+@use '/src/styles.sass' as *
+
+%flex-horizontal
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+
+#container
+  background-color: $primary-color1
+  height: 80px
+  padding: 0px 20px
+
+  @extend %flex-horizontal
+
+  #logo
+    background-color: $secondary-color6
+    color: white
+    padding: 10px 20px
+    user-select: none
+
+  ul
+    @extend %flex-horizontal
+
+    list-style-type: none
+
+  .flex1
+    background-color: #faaaaa
+
+
