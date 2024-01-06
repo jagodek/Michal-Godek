@@ -1,0 +1,175 @@
+@use '/src/styles.sass' as *
+
+
+.main-container
+  display: flex
+  justify-content: center
+
+  padding: 20px
+
+  h1
+    margin-bottom: 20px
+
+  p
+    margin-bottom: 10px
+
+  .cv
+    width: 1360px
+    height: 1400px
+
+    background-color: $gray1
+    padding: 50px
+
+    header
+      display: flex
+      flex-direction: row
+
+      justify-content: space-between
+      align-items: center
+
+      margin-bottom: 40px
+
+      .left
+        transform: translateY(-50%)
+
+        #name
+
+          font-size: 2em
+          letter-spacing: 0.25em
+
+        #subtitle
+
+          letter-spacing: 0.4em
+          text-transform: uppercase
+
+      #picture-container
+
+        $square-width: 250px
+
+        border-radius: 50%
+
+        background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%)
+        width: $square-width
+        height: $square-width
+        display: flex
+        align-content: center
+        justify-content: center
+        align-items: center
+
+        overflow: hidden
+
+        transform: translateY(30px)
+
+
+        #profile-picture
+          width: $square-width - 50px
+          transform: translateY(-10px)
+          contain: content
+
+
+    section#cv-main-content
+
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      height: 1200px
+
+      .small-block
+        h6
+          text-transform: uppercase
+          font-size: 1.6em
+          font-weight: 200
+          text-transform: uppercase
+          margin-bottom: 1rem
+        p
+
+      .big-block
+        h6
+          font-size: 2em
+          font-weight: 200
+          text-transform: uppercase
+          margin-bottom: 1rem
+
+        p
+
+      article
+        width: 600px
+        margin-bottom: 3rem
+        p
+          text-indent: 1em
+
+      article#contact
+
+        table
+          border-spacing: 20px
+
+          a
+            text-decoration: none
+            color: $gray5
+            letter-spacing: 0.1em
+
+          td:last-of-type
+            font-size: 1.2em
+
+
+
+          img, .icon
+            width: 30px
+            font-size: 2em
+
+          .phone
+
+          .mail
+
+          .github
+
+            img
+
+          .facebook
+
+          .linkedin
+
+          .first-col
+
+          .second-col
+
+      article#skills
+        p
+
+        ul
+          column-count: 2
+          list-style-position: inside
+          margin-bottom: 1.5rem
+
+          li
+
+        #technologies
+
+        #other-skills
+
+      article#free-time
+
+        p
+
+      article#work-experience
+
+
+
+@media (max-width: 1000px)
+  .cv
+    background: red
+    width: 1000px
+    height: 1400px
+
+
+@media (max-width:  600px)
+  .cv
+    width: 600px
+    height: 1400px
+
+
+
+
+
+
+

@@ -1,9 +1,9 @@
 <div id="container">
-  <h1 class="flex1" id="logo" >Michał Godek</h1>
+  <div class="flex1" id="logo" ><p>Michał Godek</p></div>
   <ul class="flex1">
-    <li class="flex2">Home</li>
-    <li class="flex2">Web Development</li>
-    <li class="flex2">My other projects</li>
+    <li class="flex2 button" (click)="router.navigate([''])">Home</li>
+    <li class="flex2 button" (click)="router.navigate(['web-development'])">Web Development</li>
+    <li class="flex2 button" (click)="router.navigate(['other-projects'])">My other projects</li>
   </ul>
 </div>
 
