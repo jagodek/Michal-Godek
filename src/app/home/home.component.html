@@ -1,28 +1,31 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<button id="up"><a href="#cv">^</a></button>
 <div class="main-container">
-  <div class="cv">
+  <div id="cv" (scroll)="onScroll($event)">
     <header>
       <div class="left">
         <h1 id="name">Michał Godek</h1>
         <p id="subtitle">computer science student, agh kraków</p>
       </div>
       <div id='picture-container'>
-        <img id="profile-picture" src="/assets/profile10.png" alt="picture of my face">
+        <img id="profile-picture" src="/assets/images/profile10.png" alt="picture of my face">
       </div>
     </header>
 
-    <section id="cv-main-content">
+    <div id="cv-main-content">
 
-      <article id="profile">
-        <div class="big-block">
-          <h6>profile</h6>
-          <p>I am primaly interested in frontend development. During my studies i learned about
-            Angular. I have also experience with Java and Python. I am looking for a
-            job where I will gain experience, develop my skills and use academic knowledge. I am available now for working full time.</p>
-        </div>
+      <article  id="profile">
+
+          <div class="big-block">
+            <h6>profile</h6>
+            <p>I am primaly interested in frontend development. During my studies i learned about
+              Angular. I have also experience with Java and Python. I am looking for a
+              job where I will gain experience, develop my skills and use academic knowledge. I am available now for working full time.</p>
+          </div>
       </article>
 
       <article id="contact" class="big-block">
+        <address>
         <h6>Contact</h6>
         <table>
           <tr class="mail">
@@ -32,10 +35,11 @@
             <td class="second-col"><a href="mailto:michal.godek01@gmail.com">michal.godek01@gmail.com</a></td>
           </tr>
           <tr class="github">
-            <td class="first-col"><img src="/assets/github.png" alt="github logo"></td>
+            <td class="first-col"><img src="/assets/images/github.png" alt="github logo"></td>
             <td class="second-col"><a href="https://www.github.com/jagodek" target="_blank">www.github.com/jagodek</a></td>
           </tr>
         </table>
+      </address>
       </article>
 
       <article id="skills">
@@ -67,18 +71,6 @@
           </div>
       </article>
 
-      <article id="free-time">
-        <div class="small-block">
-          <h6>During free time</h6>
-          <p>
-            I enjoy bicycling, both in my
-            neighborhood and at long distances.
-            Running, tourism and team games are
-            also my preferred activities. I like
-            watching movies and anime.
-          </p>
-        </div>
-      </article>
 
 
 
@@ -124,7 +116,25 @@
         </div>
       </article>
 
-    </section>
+
+
+      <article id="free-time">
+        <div class="small-block">
+          <h6>During free time</h6>
+          <p>
+            I enjoy bicycling, both in my
+            neighborhood and at long distances.
+            Running, tourism and team games are
+            also my preferred activities. I like
+            watching movies and anime.
+          </p>
+        </div>
+      </article>
+
+
+    </div>
+
+
 
 
 

@@ -1,11 +1,29 @@
 @use '/src/styles.sass' as *
 
+#up
+  position: fixed
+  bottom: 40px
+  right: 40px
+  border-radius: 50%
+  width: 50px
+  height: 50px
+
 
 .main-container
   display: flex
   justify-content: center
 
-  padding: 20px
+  // height: calc(100vh - 40px)
+
+
+
+  // transition: height 1s
+  // transform-origin: top
+
+
+
+
+
 
   h1
     margin-bottom: 20px
@@ -13,12 +31,16 @@
   p
     margin-bottom: 10px
 
-  .cv
-    width: 1360px
-    height: 1400px
+  #cv
+    width: 100%
+
 
     background-color: $gray1
     padding: 50px
+    padding-top: 100px
+
+    article
+      scroll-snap-align: start
 
     header
       display: flex
@@ -27,7 +49,11 @@
       justify-content: space-between
       align-items: center
 
-      margin-bottom: 40px
+      margin-bottom: 100vh
+      padding-top: 200px
+
+      scroll-snap-align: start
+
 
       .left
         transform: translateY(-50%)
@@ -67,12 +93,10 @@
           contain: content
 
 
-    section#cv-main-content
+    #cv-main-content
 
       display: flex
       flex-direction: column
-      flex-wrap: wrap
-      height: 1200px
 
       .small-block
         h6
@@ -81,7 +105,6 @@
           font-weight: 200
           text-transform: uppercase
           margin-bottom: 1rem
-        p
 
       .big-block
         h6
@@ -89,12 +112,17 @@
           font-weight: 200
           text-transform: uppercase
           margin-bottom: 1rem
-
+      [class$=#{"block"}]
         p
+          font-weight: 100
+          
+
+
 
       article
         width: 600px
-        margin-bottom: 3rem
+        margin-bottom: 100vh
+        scroll-snap-align: center
         p
           text-indent: 1em
 
@@ -156,14 +184,14 @@
 
 
 @media (max-width: 1000px)
-  .cv
+  #cv
     background: red
     width: 1000px
     height: 1400px
 
 
 @media (max-width:  600px)
-  .cv
+  #cv
     width: 600px
     height: 1400px
 

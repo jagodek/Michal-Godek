@@ -6,52 +6,101 @@
   align-items: center
   justify-content: space-between
 
-#container
-  background-color: $gradient1
-  height: 80px
-  padding: 0px 0px
-
-  @extend %flex-horizontal
-
-  #logo
-    display: flex
-    user-select: none
-
-    height: 50px
-
-    font-size: 2em
 
 
-    padding: 10px 30px
-    border-radius: 0 15px 15px 0
+#outer-container
+  position: sticky
+  top: 0
+  z-index: 2
 
-    background-color: $gradient6
-    color: $gray1
-
-    text-align: center
-    vertical-align: middle
-    align-items: center
-
+  #container
+    padding: 0px 10vw
+    height: 80px
 
 
-  ul
+    background-color: rgba($gray5, 0.5)
+    backdrop-filter: blur(1rem)
+
+
     @extend %flex-horizontal
-    justify-content: flex-start
-    width: 500px
-    gap: 20px
-    list-style-type: none
-    padding: 10px 20px
-    background-color: $gradient6
-    border-radius: 15px 0 0 15px
 
-    .flex2
-      background-color: $gradient3
-      padding: 10px
-      cursor: pointer
+    
+
+    @media (max-width: 900px)
+      flex-direction: column
+      height: 110px
+      padding: 0 10px
+
+
+    #logo
+      display: flex
+      user-select: none
+
+      height: 50px
+
+      font-size: 40px
+      font-weight: 600
+
+      padding: 10px 30px
+      border-radius: 0 15px 15px 0
+
+      // background-color: $gradient6
       color: $gray1
 
+      text-align: center
+      vertical-align: middle
+      align-items: center
 
-.button
+      @media (max-width: 1100px)
+        font-size: 30px
+
+
+
+    ul
+      @extend %flex-horizontal
+      justify-content: space-between
+      gap: 20px
+      list-style-type: none
+      padding: 10px 20px
+      width: 500px
+      // background-color: $gradient6
+      border-radius: 15px 0 0 15px
+
+      .flex2
+        padding: 10px
+        cursor: pointer
+        color: $gray1
+
+
+  .button
+    position: relative
+    display: inline-block
+
+
+
+
+
+    &::after
+      transform: scaleX(0)
+      content: ''
+      height: 3px
+      width: 100%
+      bottom: 0
+      left: 0
+      position: absolute
+      transform-origin: bottom left
+      background-color: white
+      transition-duration: 0.3s
+    &:hover::after
+      transform: scaleX(1)
+      transform-origin: bottom left
+
+
+
+
+
+
+
 
 
 

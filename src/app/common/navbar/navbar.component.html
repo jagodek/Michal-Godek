@@ -1,10 +1,28 @@
-<div id="container">
-  <div class="flex1" id="logo" ><p>Michał Godek</p></div>
-  <ul class="flex1">
-    <li class="flex2 button" (click)="router.navigate([''])">Home</li>
-    <li class="flex2 button" (click)="router.navigate(['web-development'])">Web Development</li>
-    <li class="flex2 button" (click)="router.navigate(['other-projects'])">My other projects</li>
-  </ul>
+<div id="outer-container" ngClass="small">
+
+  <div id="container">
+    <div class="flex1" id="logo" ><p>Michał Godek</p></div>
+    <ul class="flex1">
+      <li class="flex2 button" (click)="router.navigate([''])">
+        <a>
+          Home
+        </a>
+      </li>
+      <li class="flex2 button" (click)="router.navigate(['web-development'])">
+        <a>
+          Web Development
+
+        </a>
+      </li>
+      <li class="flex2 button" (click)="router.navigate(['other-projects'])">
+        <a>
+          My other projects
+
+        </a>
+
+      </li>
+    </ul>
+  </div>
 </div>
 
 

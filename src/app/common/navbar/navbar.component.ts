@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,9 +7,15 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.sass']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
   router!:Router;
+
+
+
   constructor(router:Router) {
     this.router = router;
+  }
+
+  ngOnInit(): void {
   }
 }
